@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myController"
+        ng-init="list=[
+            { name:'Product Id' }, 
+            { name:'Advanced Composite Materials'}, 
+            { name:'Stategies Unplugged' }, 
+            { name:'Teaching Science' }, 
+            { name:'Challenging Times' }]">
+
+        <div ng-repeat="books in list">
+            <input type="checkbox" ng-model="books.selected"
+                ng-true-value="'{{books.name}}'" ng-false-value="''"
+                id="'{{books.name}}'" />
+
+            {{ books.name }}
+        </div>
+        
+        <p><button ng-click="submit(list)">Submit</button></p>
+
+        <p>{{the_list}}</p>
+    </div>
+</body>
+
+<script>
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('myController', ['$scope', function ($form) {
+        $form.submit = function (list) {
+            var books = [];
+            angular.forEach(list, function (value, key) {
+                if (list[key].selected == list[key].name) {
+                    books.push(list[key].selected);
+                }
+            });
+
+            // SHOW THE SELECTED ITEMS IN THE EXPRESSION.
+            if (books.length > 0)
+                $form.the_list = books.toString();
+            else
+                $form.the_list = 'Please choose an option';
+        }
+    } ]
+    );
+</script>
+</html>

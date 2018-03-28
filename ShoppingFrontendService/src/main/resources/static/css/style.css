@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+.login-form{
+	margin-top: 120px;
+}
+.my-table
+{
+	margin-top: 40px;
+}
+body {
+    background-color: #ffffff;
+}
+
+header, footer {
+    background-color: #0097db;
+    /* background-color: #408080; */
+    clear: left;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}

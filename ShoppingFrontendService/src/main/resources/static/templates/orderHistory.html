@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<br>
+<body>
+
+	<form>
+		<br> <br>
+		<div ng-app="shoppingApp" ng-controller="cartHistoryCtrl"
+			ng-init="loadcartHistDetails()">
+
+
+			<table>
+				<tr>
+					<th>Order Number</th>
+					<th>Order Date</th>
+					<th>Product Name</th>
+					<th>Product Name</th>
+					<th>Product Name</th>
+					<th>Product Name</th>
+					<th>Product Name</th>
+				</tr>
+				<tr ng-repeat="products in cart">
+					<td>{{cart.item1}}</td>
+					<td><input type="checkbox" id="{{cart.item1}}" ng-change="addProd($cart.item1)" ng-model="cart.selected"/></td>
+				</tr>
+			</table>
+		</div>
+	
+
+		<!-- <p>
+		    <button ng-click="submit()"><span class="glyphicon glyphicon-log-in"></span> <strong>Checkout</strong></button>
+		</p> -->
+
+	
+</body>
+</br>
+
+</form>
+</html>

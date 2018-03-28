@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<br>
+<body>
+
+	<form>
+		<br> <br>
+		<div ng-app="shoppingApp" ng-controller="viewCartCtrl"
+			ng-init="loadCartDetails()">
+
+			<div>
+			  <table ng-show="responseHasProducts">
+			    <tr><th>Product name</th><th>Remove</th></tr>
+			    <tr ng-show="response.item1"><td>{{response.item1}}</td><td><input type="checkbox" ng-model="response.checkbox1" /></td></tr>
+			    <tr ng-show="response.item2"><td>{{response.item2}}</td><td><input type="checkbox" ng-model="response.checkbox2" /></td></tr>
+			    <tr ng-show="response.item3"><td>{{response.item3}}</td><td><input type="checkbox" ng-model="response.checkbox3" /></td></tr>
+			    <tr ng-show="response.item4"><td>{{response.item4}}</td><td><input type="checkbox" ng-model="response.checkbox4" /></td></tr>
+			    <tr ng-show="response.item5"><td>{{response.item5}}</td><td><input type="checkbox" ng-model="response.checkbox5" /></td></tr>
+			    <tr col-span="2"><td><input type="button" value="Remove" ng-click="removeProducts()"/></td></tr>
+			  </table>
+			  <div ng-show="responseHasProducts != true">No products in your cart</div>
+			</div>
+			
+		</div>
+		<div>
+			Select Shipping Type :
+			<input type="radio" ng-model="myVar" value="standard" ng-click="getVal()">Standard
+			<input type="radio" ng-model="myVar" value="overnight" ng-click="getVal()">Overnight
+		</div>
+		<div>
+		<p>
+		    <button ng-click="submit()"><strong>Checkout</strong></button>
+			<!-- <button ng-click="submit()">Submit</button> -->
+		</p>
+		</div>	
+</body>
+</br>
+
+</form>
+</html>

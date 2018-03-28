@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<br>
+<body>
+
+	<form>
+		<br> <br>
+		<div ng-app="shoppingApp" ng-controller="checkoutCtrl">
+		<div><strong>Your final cart Price is : {{checkoutData.checkoutPrice}}</strong></div>
+		
+		<p>
+		    <button ng-click="submit()"><strong>Confirm Order</strong></button>
+			<!-- <button ng-click="submit()">Submit</button> -->
+		</p>
+		</div>	
+</body>
+</br>
+
+</form>
+</html>

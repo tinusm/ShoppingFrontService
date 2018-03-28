@@ -1,0 +1,79 @@
+<div class="form-style-3"  ng-controller="ProfileCtrl" align="center">
+	<form>
+		<fieldset>
+
+			<legend></legend>
+			<br></br> <span>Customer Profile <span class="required">
+				<label for="field1"><span>Customer ID <span
+							class="required"></span></span><input type="text" placeholder="customerid" ng-model="customerid"
+						name="customerid" readonly /></label>
+						<label for="field2"><span>Customer Name <span
+							class="required"></span></span><input type="text" placeholder="customername" ng-model="customername"
+						name="customername" readonly /></label> 
+						<label for="field3"><span>Email
+							ID <span class="required"></span>
+					</span><input type="text" placeholder="emailid" ng-model="emailid" name="emailid" /></label> <label
+					for="field4"><span>Address <span class="required"></span></span><input
+						type="text" placeholder="address" ng-model="address" name="address"  /></label> <label
+					for="field5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Phone Number <span
+							class="required"></span></span><input type="text" placeholder="phonenumber" ng-model="phonenumber"
+						name="phonenumber" /> <button ng-click="updateProfile()"><span class="glyphicon glyphicon-log-in"></span> <strong>Save</strong></button></label>
+					
+		</fieldset>
+	</form>
+</div>
+<style type="text/css">
+.form-style-3 {
+	max-width: 2500px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.form-style-3 label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.form-style-3 label>span {
+	float: left;
+	width: 100px;
+	color: #E2B842;
+	font-weight: 600;
+	font-size: 0.85em;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.form-style-3 fieldset {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #010f11;
+	padding: 20px;
+	background: #008040;
+	box-shadow: inset 0px 0px 15px #010f11;
+	-moz-box-shadow: inset 0px 0px 15px #010f11;
+	-webkit-box-shadow: inset 0px 0px 15px #010f11;
+}
+
+.form-style-3 textarea {
+	width: 250px;
+	height: 10px;
+}
+
+.form-style-3 input[type=text], .form-style-3 input[type=date],
+	.form-style-3 input[type=datetime], .form-style-3 input[type=number],
+	.form-style-3 textarea {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #0ed0ea;
+	outline: none;
+	color: #6a6f70;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #FFD5E7;
+	-moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+	background: #FFEFF6;
+	width: 20%;
+}
+</style>
